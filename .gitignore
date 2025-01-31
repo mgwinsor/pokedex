@@ -27,3 +27,6 @@ repl_test.go
 
 # env file
 .env
+
+# project files
+repl.log
