@@ -6,8 +6,13 @@ import (
 	"github.com/mgwinsor/pokedex/internal/pokeapi"
 )
 
+const (
+	timeout       = 5 * time.Second
+	cacheInterval = 5 * time.Minute
+)
+
 func main() {
-	pokeClient := pokeapi.NewClient(5 * time.Second)
+	pokeClient := pokeapi.NewClient(timeout, cacheInterval)
 	cfg := &config{
 		pokeapiClient: pokeClient,
 	}

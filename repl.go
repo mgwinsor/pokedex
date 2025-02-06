@@ -16,7 +16,7 @@ type cliCommand struct {
 }
 
 type config struct {
-	pokeapiClient   pokeapi.Client
+	pokeapiClient   *pokeapi.Client
 	nextLocationURL *string
 	prevLocationURL *string
 }
