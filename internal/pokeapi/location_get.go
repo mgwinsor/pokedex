@@ -15,6 +15,7 @@ func (c *Client) GetLocation(locationName string) (Location, error) {
 		if err != nil {
 			return Location{}, err
 		}
+		return locationResp, nil
 	}
 
 	req, err := http.NewRequest("GET", url, nil)
